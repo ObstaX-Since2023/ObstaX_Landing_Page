@@ -15,9 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-w-[375px] bg-primary-foreground ">
+      <body className="min-w-[375px] bg-primary-foreground">
         <Header />
         {children}
+        <h1 className="scroll-m-20 text-4xl font-bold lg:text-6xl text-center mt-40">Footer</h1>
       </body>
     </html>
   );

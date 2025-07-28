@@ -11,14 +11,14 @@ import {
 
 export default function Header() {
     return (
-        <header className="sticky top-0 z-50 bg-slate-300 w-full px-16 py-4">
-            <div className="flex justify-between items-center max-w-5xl mx-auto w-full">
+        <header className="sticky top-0 z-50 bg-slate-300 w-full px-8 sm:px-16 py-4">
+            <div className="flex justify-between items-center max-w-7xl sm:px-16 mx-auto w-full">
 
-                <Link href="/" className="text-xl font-bold">
+                <Link href="/" className="text-2xl font-bold">
                     ObstaX
                 </Link>
 
-                <div className="flex items-center space-x-6">
+                <div className="flex items-center space-x-6 text-2xl">
                     <Link href="/product" className="nav-link hidden sm:flex">
                         How it works
                     </Link>
