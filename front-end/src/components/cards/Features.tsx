@@ -18,36 +18,42 @@ type FeatureCardProps = {
 
 const features: FeatureCardProps[] = [
     {
-        name: "Haptic Feedback",
+        name: "Real-Time Object Detection",
         imageSrc: "/images/prod.png",
-        description: "Haptic Feedback description.",
-        alt: "Haptic Feedback Image",
+        description:
+            "Detects obstacles in your path and alerts you instantly through vibration and voice cues.",
+        alt: "Object detection visualization",
     },
     {
-        name: "Haptic Feedback",
+        name: "GPS-Free Indoor Navigation",
         imageSrc: "/images/prod.png",
-        description: "Haptic Feedback description.",
-        alt: "Haptic Feedback Image",
+        description:
+            "Navigate malls, MRT stations, or HDB blocks without relying on internet or GPS signals.",
+        alt: "Indoor navigation concept",
     },
     {
-        name: "Haptic Feedback",
+        name: "Multi-Language Voice Assistant",
         imageSrc: "/images/prod.png",
-        description: "Haptic Feedback description.",
-        alt: "Haptic Feedback Image",
+        description:
+            "Understand your surroundings through a voice assistant that speaks in English or Mandarin.",
+        alt: "Voice assistant speaking",
     },
     {
-        name: "Haptic Feedback",
+        name: "Wearable Haptic Feedback",
         imageSrc: "/images/prod.png",
-        description: "Haptic Feedback description.",
-        alt: "Haptic Feedback Image",
+        description:
+            "Smart vibrations let you feel directions and alerts intuitively, hands-free.",
+        alt: "Haptic feedback wearable",
     },
     {
-        name: "Haptic Feedback",
+        name: "One-Touch Help Access",
         imageSrc: "/images/prod.png",
-        description: "Haptic Feedback description.",
-        alt: "Haptic Feedback Image",
+        description:
+            "Contact caregivers or loved ones with a single button for emergencies or assistance.",
+        alt: "Help button on device",
     },
 ];
+
 
 export default function FeatureCard() {
     return (
