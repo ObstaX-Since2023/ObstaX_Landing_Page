@@ -1,3 +1,5 @@
+"use client"
+
 import {
     Card,
     CardContent,
@@ -33,15 +35,27 @@ const features: FeatureCardProps[] = [
         description: "Haptic Feedback description.",
         alt: "Haptic Feedback Image",
     },
+    {
+        name: "Haptic Feedback",
+        imageSrc: "/images/prod.png",
+        description: "Haptic Feedback description.",
+        alt: "Haptic Feedback Image",
+    },
+    {
+        name: "Haptic Feedback",
+        imageSrc: "/images/prod.png",
+        description: "Haptic Feedback description.",
+        alt: "Haptic Feedback Image",
+    },
 ];
 
 export default function FeatureCard() {
     return (
         <>
             <h2 className="scroll-m-20 text-3xl font-bold sm:mt-16 mt-12 lg:text-4xl">Product features</h2>
-            <div className="flex flex-wrap gap-4 mt-6">
+            <div id="features-scroll" className="scroll-cards no-scrollbar">
                 {features.map((t, index) => (
-                    <Card key={index} className="w-80 min-h-40 md:min-h-60">
+                    <Card key={index} className="w-80 min-h-40 md:min-h-60 flex-shrink-0 m-1">
 
                         <Image
                             src={t.imageSrc}
@@ -60,6 +74,25 @@ export default function FeatureCard() {
                         </CardContent>
                     </Card>
                 ))}
+            </div>
+
+            <div className="flex justify-end gap-4 mt-4">
+                <button
+                    onClick={() => {
+                        document.getElementById("features-scroll")?.scrollBy({ left: -320, behavior: "smooth" });
+                    }}
+                    className="px-4 py-1 bg-gray-200 rounded"
+                >
+                    ←
+                </button>
+                <button
+                    onClick={() => {
+                        document.getElementById("features-scroll")?.scrollBy({ left: 320, behavior: "smooth" });
+                    }}
+                    className="px-4 py-1 bg-gray-200 rounded"
+                >
+                    →
+                </button>
             </div>
         </>
     );

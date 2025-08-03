@@ -9,7 +9,7 @@ import FeatureCard from '@/components/cards/Features'
 
 export default function Home() {
   return (
-    <main className="flex max-w-7xl flex-col px-8 sm:px-16 justify-self-center ">
+    <main className="flex max-w-full lg:max-w-7xl min-w-[375px] flex-col px-8 sm:px-16 justify-self-center ">
 
       {/* Hero Section */}
       <section className="sm:flex min-h-[calc(100vh-64px-160px)] sm:space-x-16">
@@ -34,12 +34,14 @@ export default function Home() {
             src={product}
             width={1000}
             height={1000}
+            min-width={600}
+            min-height={600}
             alt="ObstaX SmartGlasses"
           />
         </div>
       </section>
 
-      {/* Testimonial Cards */}
+      {/* Cards */}
       <section className="flex flex-col">
 
         <TestimonialCard />
