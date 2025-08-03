@@ -37,27 +37,30 @@ const features: FeatureCardProps[] = [
 
 export default function FeatureCard() {
     return (
-        <div className="flex flex-wrap gap-4 mt-6">
-            {features.map((t, index) => (
-                <Card key={index} className="w-80 min-h-40 md:min-h-60">
+        <>
+            <h2 className="scroll-m-20 text-3xl font-bold sm:mt-16 mt-12 lg:text-4xl">Product features</h2>
+            <div className="flex flex-wrap gap-4 mt-6">
+                {features.map((t, index) => (
+                    <Card key={index} className="w-80 min-h-40 md:min-h-60">
 
-                    <Image
-                        src={t.imageSrc}
-                        alt={t.alt || t.name}
-                        width={400}
-                        height={200}
-                        className="object-cover w-full h-48"
-                    />
+                        <Image
+                            src={t.imageSrc}
+                            alt={t.alt || t.name}
+                            width={400}
+                            height={200}
+                            className="object-cover w-full h-48"
+                        />
 
-                    <CardHeader>
-                        <CardTitle>{t.name}</CardTitle>
-                    </CardHeader>
+                        <CardHeader>
+                            <CardTitle>{t.name}</CardTitle>
+                        </CardHeader>
 
-                    <CardContent>
-                        <p className="text-muted-foreground">{t.description}</p>
-                    </CardContent>
-                </Card>
-            ))}
-        </div>
+                        <CardContent>
+                            <p className="text-muted-foreground">{t.description}</p>
+                        </CardContent>
+                    </Card>
+                ))}
+            </div>
+        </>
     );
 }

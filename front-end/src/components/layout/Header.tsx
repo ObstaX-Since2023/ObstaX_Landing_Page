@@ -32,25 +32,26 @@ export default function Header() {
                             Pre-Order
                         </Link>
                     </Button>
-
-                    <div className="sm:hidden">
-                        <DropdownMenu modal={false}>
-                            <DropdownMenuTrigger asChild>
-                                <Button variant="outline" size="icon">
-                                    <Menu />
-                                </Button>
-                            </DropdownMenuTrigger>
-                            <DropdownMenuContent className="w-40 justify-end" align="end" >
-                                <DropdownMenuItem asChild className="cursor-pointer">
-                                    <Link href="/product">How it works</Link>
-                                </DropdownMenuItem>
-                                <DropdownMenuItem asChild className="cursor-pointer">
-                                    <Link href="/about">Who are we</Link>
-                                </DropdownMenuItem>
-                            </DropdownMenuContent>
-                        </DropdownMenu>
-                    </div>
                 </div>
+
+                <div className="sm:hidden">
+                    <DropdownMenu modal={false}>
+                        <DropdownMenuTrigger asChild>
+                            <Button variant="outline" size="icon">
+                                <Menu />
+                            </Button>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent className="w-40 justify-end" align="end" >
+                            <DropdownMenuItem asChild className="cursor-pointer">
+                                <Link href="/product">How it works</Link>
+                            </DropdownMenuItem>
+                            <DropdownMenuItem asChild className="cursor-pointer">
+                                <Link href="/about">Who are we</Link>
+                            </DropdownMenuItem>
+                        </DropdownMenuContent>
+                    </DropdownMenu>
+                </div>
+
             </div>
         </header>
     )

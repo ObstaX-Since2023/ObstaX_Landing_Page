@@ -23,21 +23,28 @@ const testimonials: TestimonialProps[] = [
         name: "Mr. Koh, 67 years old",
         quote: "It's like having someone guide me without needing to ask for help.",
     },
+    {
+        name: "Mr. Koh, 67 years old",
+        quote: "It's like having someone guide me without needing to ask for help.",
+    },
 ];
 
 export default function TestimonialCard() {
     return (
-        <div className="flex flex-wrap gap-4 mt-6">
-            {testimonials.map((t, index) => (
-                <Card key={index} className="w-80 min-h-40 md:min-h-60">
-                    <CardHeader>
-                        <CardTitle>{t.name}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                        <p className="text-muted-foreground">{t.quote}</p>
-                    </CardContent>
-                </Card>
-            ))}
+        <div className="mt-6 relative">
+            <h2 className="scroll-m-20 text-3xl font-bold mt-16 lg:text-4xl">Testimonials</h2>
+            <div id="testimonial-scroll" className="flex gap-4 overflow-x-auto scroll-smooth no-scrollbar">
+                {testimonials.map((t, index) => (
+                    <Card key={index} className="w-80 min-h-40 md:min-h-60">
+                        <CardHeader>
+                            <CardTitle>{t.name}</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <p className="text-muted-foreground text-normal">{t.quote}</p>
+                        </CardContent>
+                    </Card>
+                ))}
+            </div>
         </div>
     );
 }

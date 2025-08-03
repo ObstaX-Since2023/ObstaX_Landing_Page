@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 // SEO Metadata
 export const metadata: Metadata = {
@@ -18,7 +19,7 @@ export default function RootLayout({
       <body className="min-w-[375px] bg-primary-foreground">
         <Header />
         {children}
-        <h1 className="scroll-m-20 text-4xl font-bold lg:text-6xl text-center mt-40">Footer</h1>
+        <Footer />
       </body>
     </html>
   );
