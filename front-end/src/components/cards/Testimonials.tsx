@@ -6,6 +6,7 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 type TestimonialProps = {
     name: string;
@@ -48,7 +49,6 @@ const testimonials: TestimonialProps[] = [
 export default function TestimonialCard() {
     return (
         <div className="mt-6 relative">
-            <h2 className="scroll-m-20 text-3xl font-bold mt-16 lg:text-4xl">Testimonials</h2>
             <div id="testimonial-scroll" className="scroll-cards no-scrollbar">
                 {testimonials.map((t, index) => (
                     <Card key={index} className="w-80 min-h-40 md:min-h-60 flex-shrink-0 m-1">
@@ -70,17 +70,17 @@ export default function TestimonialCard() {
                     onClick={() => {
                         document.getElementById("testimonial-scroll")?.scrollBy({ left: -340, behavior: "smooth" });
                     }}
-                    className="scroll-button"
+                    className="px-4 py-2 bg-gray-200 rounded"
                 >
-                    ←
+                    <ArrowLeft size={16} />
                 </button>
                 <button
                     onClick={() => {
                         document.getElementById("testimonial-scroll")?.scrollBy({ left: 340, behavior: "smooth" });
                     }}
-                    className="scroll-button"
+                    className="px-4 py-2 bg-gray-200 rounded"
                 >
-                    →
+                    <ArrowRight size={16} />
                 </button>
             </div>
         </div>

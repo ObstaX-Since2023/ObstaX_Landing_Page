@@ -6,6 +6,7 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 import Image from "next/image";
 
@@ -58,7 +59,6 @@ const features: FeatureCardProps[] = [
 export default function FeatureCard() {
     return (
         <>
-            <h2 className="scroll-m-20 text-3xl font-bold sm:mt-16 mt-12 lg:text-4xl">Product features</h2>
             <div id="features-scroll" className="scroll-cards no-scrollbar">
                 {features.map((t, index) => (
                     <Card key={index} className="w-80 min-h-40 md:min-h-60 flex-shrink-0 m-1">
@@ -85,19 +85,19 @@ export default function FeatureCard() {
             <div className="flex justify-end gap-4 mt-4">
                 <button
                     onClick={() => {
-                        document.getElementById("features-scroll")?.scrollBy({ left: -320, behavior: "smooth" });
+                        document.getElementById("features-scroll")?.scrollBy({ left: -340, behavior: "smooth" });
                     }}
-                    className="px-4 py-1 bg-gray-200 rounded"
+                    className="px-4 py-2 bg-gray-200 rounded"
                 >
-                    ←
+                    <ArrowLeft size={16} />
                 </button>
                 <button
                     onClick={() => {
-                        document.getElementById("features-scroll")?.scrollBy({ left: 320, behavior: "smooth" });
+                        document.getElementById("features-scroll")?.scrollBy({ left: 340, behavior: "smooth" });
                     }}
-                    className="px-4 py-1 bg-gray-200 rounded"
+                    className="px-4 py-2 bg-gray-200 rounded"
                 >
-                    →
+                    <ArrowRight size={16} />
                 </button>
             </div>
         </>
