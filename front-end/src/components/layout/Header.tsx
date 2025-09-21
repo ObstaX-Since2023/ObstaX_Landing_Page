@@ -28,7 +28,7 @@ export default function Header() {
                             Who are we
                         </Link>
 
-                        <Button asChild className="hover:bg-secondary hover:text-foreground">
+                        <Button asChild className="button hover:bg-secondary hover:text-foreground">
                             <Link href="/product/pre-order">
                                 Pre-Order
                             </Link>

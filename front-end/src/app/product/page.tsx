@@ -13,16 +13,16 @@ export default function Product() {
 
             <section className='flex flex-col sm:flex-row gap-10 sm:mt-16 mt-8'>
                 <div id='itemDescription' className='sm:hidden'>
-                    <h1 className="scroll-m-20 text-2xl font-semibold lg:text-2xl">ObstaX 1</h1>
+                    <h1 className="scroll-m-20 text-2xl font-semibold lg:text-2xl">ObstaX 1.0</h1>
                     <h4 className="scroll-m-20 text-lg font-light mt-0">Pendant and Wristbands</h4>
-                    <h4 className="scroll-m-20 text-xl font-normal mt-4">S$ 209</h4>
+                    <h4 className="scroll-m-20 text-xl font-normal mt-4">S$ 609</h4>
                 </div>
 
                 <ImageGallery />
 
                 <div id='descriptionColumn' className='flex flex-col sm:w-120'>
                     <div id='itemDescription' className='hidden sm:inline'>
-                        <h1 className="scroll-m-20 text-2xl font-semibold lg:text-2xl">ObstaX 1</h1>
+                        <h1 className="scroll-m-20 text-2xl font-semibold lg:text-2xl">ObstaX 1.0</h1>
                         <h4 className="scroll-m-20 text-lg font-light mt-0">Pendant and Wristbands</h4>
                         <h2 className="scroll-m-20 text-xl font-normal mt-4">S$ 209</h2>
                     </div>
@@ -42,7 +42,7 @@ export default function Product() {
                     </h4>
 
 
-                    <Button asChild className="hover:bg-secondary hover:text-foreground hover:border [&:not(:first-child)]:mt-12 py-4 lg:py-6 lg:text-lg rounded-3xl">
+                    <Button asChild className="button hover:bg-secondary hover:text-foreground hover:border py-4 lg:py-6 lg:text-lg rounded-3xl [&:not(:first-child)]:mt-12">
                         <Link href="/product/pre-order">
                             Pre-Order Now
                             <ArrowRightIcon />

@@ -87,7 +87,7 @@ export default function FeatureCard() {
                     onClick={() => {
                         document.getElementById("features-scroll")?.scrollBy({ left: -340, behavior: "smooth" });
                     }}
-                    className="px-4 py-2 bg-gray-200 rounded"
+                    className="button px-4 py-2 bg-gray-200 rounded"
                 >
                     <ArrowLeft size={16} />
                 </button>
@@ -95,7 +95,7 @@ export default function FeatureCard() {
                     onClick={() => {
                         document.getElementById("features-scroll")?.scrollBy({ left: 340, behavior: "smooth" });
                     }}
-                    className="px-4 py-2 bg-gray-200 rounded"
+                    className="button px-4 py-2 bg-gray-200 rounded"
                 >
                     <ArrowRight size={16} />
                 </button>

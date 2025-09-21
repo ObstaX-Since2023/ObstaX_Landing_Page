@@ -156,3 +156,7 @@
 .section-header {
   @apply scroll-m-20 text-3xl font-bold mt-16 lg:text-4xl
 }
+
+.button {
+  @apply cursor-pointer disabled:bg-slate-100 disabled:cursor-not-allowed
+}

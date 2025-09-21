@@ -22,7 +22,7 @@ export default function ImageGallery() {
     };
 
     return (
-        <div className="relative w-80 sm:w-120 h-100 sm:h-160">
+        <div className="relative w-full sm:w-120 h-100 sm:h-160">
             {/* Main Image Display */}
             <Image
                 src={images[current]}
@@ -35,14 +35,14 @@ export default function ImageGallery() {
                 <button
                     onClick={() => scrollTo(current - 1)}
                     disabled={current === 0}
-                    className="px-4 py-2 mr-4 bg-gray-200 rounded shadow"
+                    className="button px-4 py-2 mr-4 bg-slate-200 rounded shadow "
                 >
                     <ArrowLeft size={16} />
                 </button>
                 <button
                     onClick={() => scrollTo(current + 1)}
                     disabled={current === images.length - 1}
-                    className="px-4 py-2 bg-gray-200 rounded shadow"
+                    className="button px-4 py-2 bg-slate-200 rounded shadow"
                 >
                     <ArrowRight size={16} />
                 </button>

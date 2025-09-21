@@ -1,4 +1,4 @@
-import { ArrowDownAZIcon, JapaneseYen, RussianRuble, SignalZero, Weight } from "lucide-react";
+import { ArrowDownAZIcon, JapaneseYen, RussianRuble, Weight } from "lucide-react";
 
 export default function ItemDescriptions() {
   const items = [
