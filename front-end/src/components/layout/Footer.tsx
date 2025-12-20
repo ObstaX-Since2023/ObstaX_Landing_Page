@@ -61,7 +61,7 @@ export default function Footer() {
                 </div>
 
                 <p className="text-sm text-gray-600">
-                    © {new Date().getFullYear()} ObstaX Pte. Ltd. | All rights reserved.
+                    © {new Date().getFullYear()} ObstaX Pte. Ltd.  •  All rights reserved.
                 </p>
             </div>
         </footer>

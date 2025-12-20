@@ -1,0 +1,121 @@
+"use client"
+
+import Link from 'next/link'
+import { useEffect, useMemo, useState } from 'react'
+import { Button } from '@/components/ui/button'
+
+type CountdownEvent = {
+  id: string
+  title: string
+  description: string
+  startsAt: string
+  ctaLabel: string
+  ctaHref: string
+}
+
+const countdownEvents: CountdownEvent[] = [
+  {
+    id: 'beta-testers',
+    title: 'Beta Testing for ObstaX Mini',
+    description: 'Be among the first 5 individuals to experience ObstaX Mini. Your feedback will directly shape the final product and help us ensure it truly empowers the VI community.',
+    startsAt: '2026-02-07T00:00:00',
+    ctaLabel: 'Sign Up',
+    ctaHref: 'https://forms.gle/replace-with-beta-form',
+  },
+  {
+    id: 'soft-launch',
+    title: 'ObstaX Mini Soft Launch',
+    description: 'Register your interest today to secure early access for you or your caretaker. Get priority onboarding, the latest product updates, and an exclusive early bird discount when we launch.',
+    startsAt: '2026-04-01T00:00:00',
+    ctaLabel: 'Register Interest',
+    ctaHref: 'https://forms.gle/replace-with-soft-launch-form',
+  },
+]
+
+const formatDate = (value: string) =>
+  new Intl.DateTimeFormat('en-SG', {
+    day: '2-digit',
+    month: 'short',
+    year: 'numeric',
+  }).format(new Date(value))
+
+const getTimeLeft = (targetMs: number, nowMs: number) => {
+  const delta = Math.max(0, targetMs - nowMs)
+  const totalSeconds = Math.floor(delta / 1000)
+  const days = Math.floor(totalSeconds / 86400)
+  const hours = Math.floor((totalSeconds % 86400) / 3600)
+  const minutes = Math.floor((totalSeconds % 3600) / 60)
+  const seconds = totalSeconds % 60
+
+  return { days, hours, minutes, seconds, isLive: targetMs <= nowMs }
+}
+
+const CountdownSegment = ({ value, label }: { value: number; label: string }) => (
+  <div className="flex flex-col items-center rounded-2xl border border-border/60 bg-card/70 px-4 py-3 text-center">
+    <span className="text-2xl font-semibold tabular-nums sm:text-3xl">{String(value).padStart(2, '0')}</span>
+    <span className="text-[0.65rem] font-semibold uppercase tracking-[0.35em] text-muted-foreground">{label}</span>
+  </div>
+)
+
+export default function CountdownTimeline() {
+  const [now, setNow] = useState(() => Date.now())
+
+  useEffect(() => {
+    const interval = setInterval(() => setNow(Date.now()), 1000)
+    return () => clearInterval(interval)
+  }, [])
+
+  const formattedEvents = useMemo(
+    () =>
+      countdownEvents.map((event) => ({
+        ...event,
+        formattedDate: formatDate(event.startsAt),
+        targetMs: new Date(event.startsAt).getTime(),
+      })),
+    []
+  )
+
+  return (
+    <div className="mt-8 space-y-6">
+      {formattedEvents.map((event) => {
+        const timeLeft = getTimeLeft(event.targetMs, now)
+
+        return (
+          <div
+            key={event.id}
+            className="rounded-3xl border border-border/60 bg-card/40 p-6 shadow-sm"
+          >
+            <div className="grid gap-6 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)_minmax(0,0.8fr)] md:items-center">
+              <div className="space-y-3" aria-live="polite">
+                <div className="grid grid-cols-4 gap-2">
+                  <CountdownSegment value={timeLeft.days} label="Days" />
+                  <CountdownSegment value={timeLeft.hours} label="Hrs" />
+                  <CountdownSegment value={timeLeft.minutes} label="Min" />
+                  <CountdownSegment value={timeLeft.seconds} label="Sec" />
+                </div>
+
+              </div>
+
+              <div className="space-y-2">
+                <h3 className="text-2xl font-semibold text-foreground">{event.title}</h3>
+                <p className="text-base text-muted-foreground">{event.description}</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
+                  Starts {event.formattedDate}
+                </p>
+              </div>
+
+              <Button
+                asChild
+                className="w-full rounded-3xl border border-transparent px-6 py-4 text-base hover:border hover:bg-secondary hover:text-foreground"
+              >
+                <Link href={event.ctaHref} target="_blank" rel="noreferrer">
+                  {event.ctaLabel}
+                </Link>
+              </Button>
+            </div>
+          </div>
+        )
+      })}
+    </div>
+  )
+}

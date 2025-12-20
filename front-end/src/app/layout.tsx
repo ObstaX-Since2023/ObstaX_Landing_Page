@@ -5,7 +5,7 @@ import Footer from "@/components/layout/Footer";
 
 // SEO Metadata
 export const metadata: Metadata = {
-  title: "ObstaX",
+  title: "ObstaX. AI Navigation for the Visually Impaired",
   description: "Assistive Navigation Device for the Blind and Visually Impaired in Singapore",
 };
 
