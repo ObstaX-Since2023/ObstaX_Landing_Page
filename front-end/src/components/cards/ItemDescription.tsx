@@ -1,31 +1,31 @@
-import { ArrowDownAZIcon, JapaneseYen, RussianRuble, Weight } from "lucide-react";
+import { BatteryFullIcon, BoxIcon, CompassIcon, WeightIcon } from "lucide-react";
 
 export default function ItemDescriptions() {
   const items = [
     {
-      icon: <RussianRuble size={48} />,
+      icon: <CompassIcon size={48} />,
       title: "Engineered for",
-      value: "Road running",
+      value: "Indoor & outdoor use",
     },
     {
-      icon: <ArrowDownAZIcon size={48} />,
-      title: "Size",
-      value: "Maximum",
+      icon: <BoxIcon size={48} />,
+      title: "Item Dimensions",
+      value: "10.5 x 5.5 x 2.5 cm",
     },
     {
-      icon: <Weight size={48} />,
-      title: "Shoe weight",
-      value: "Approx. 263g\n(women's size 5.5)",
+      icon: <WeightIcon size={48} />,
+      title: "Weight",
+      value: "Approx. 263g",
     },
     {
-      icon: <JapaneseYen size={48} />,
-      title: "Heel-to-toe drop",
-      value: "10mm",
+      icon: <BatteryFullIcon size={48} />,
+      title: "Battery Life",
+      value: "Lasts up to 4-6 hours",
     },
   ];
 
   return (
-    <div className="bg-slate-200 rounded-md flex flex-col sm:flex-row divide-y sm:divide-y-0 sm:divide-x divide-gray-400 mt-6">
+    <div className="bg-slate-200 rounded-md flex flex-col sm:flex-row divide-y sm:divide-y-0 sm:divide-x divide-gray-300 mt-6">
       {items.map((item, idx) => (
         <div key={idx} className="flex-1 p-6 text-center">
           <div className="justify-self-center">{item.icon}</div>

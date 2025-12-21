@@ -6,10 +6,12 @@ import Image from 'next/image'
 import { useState } from 'react'
 
 const images: string[] = [
+    "/images/obstax_mini_prodct_image_2.JPG",
     "/images/prod4.webp",
     "/images/prod.png",
     "/images/prod4.webp",
     "/images/prod.png",
+    "/images/obstax_mini_prodct_image.JPG",
 ]
 
 export default function ImageGallery() {

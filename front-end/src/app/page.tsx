@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { ArrowRightIcon } from 'lucide-react'
+import { ArrowDownIcon, ArrowRightIcon } from 'lucide-react'
 
 import TestimonialCard from '@/components/cards/Testimonials'
 import FeatureCard from '@/components/cards/Features'
@@ -31,7 +31,7 @@ export default function Home() {
           <Button asChild className="hover:bg-secondary hover:text-foreground hover:border [&:not(:first-child)]:mt-12 py-4 lg:py-6 lg:text-lg rounded-3xl">
             <Link href="/#timeline">
               View Our Timeline
-              <ArrowRightIcon />
+              <ArrowDownIcon />
             </Link>
           </Button>
         </div>
@@ -39,7 +39,7 @@ export default function Home() {
         <div className="flex flex-col flex-1 justify-center mt-12 sm:mt-0">
           <Image
             priority={true}
-            src="/images/prod.png"
+            src="/images/obstax_mini_prodct_image_2.JPG"
             width={600}
             height={600}
             min-width={400}
@@ -51,13 +51,13 @@ export default function Home() {
 
       {/* Cards */}
       <section>
-        <h2 className="section-header" id="timeline">Our Timeline</h2>
+        <h2 className="section-header" id="timeline">Our timeline</h2>
         <CountdownTimeline />
 
-        <h2 className="section-header">Testimonials</h2>
+        <h2 className="section-header" id="testimonial">Testimonials</h2>
         <TestimonialCard />
 
-        <h2 className="section-header">Product features</h2>
+        <h2 className="section-header" id="features">Product features</h2>
         <FeatureCard />
       </section>
 

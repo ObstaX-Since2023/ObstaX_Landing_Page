@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useEffect, useMemo, useState } from 'react'
 import { Button } from '@/components/ui/button'
+import { ExternalLinkIcon } from 'lucide-react'
 
 type CountdownEvent = {
   id: string
@@ -16,19 +17,19 @@ type CountdownEvent = {
 const countdownEvents: CountdownEvent[] = [
   {
     id: 'beta-testers',
-    title: 'Beta Testing for ObstaX Mini',
+    title: 'ObstaX Mini - Beta Testing',
     description: 'Be among the first 5 individuals to experience ObstaX Mini. Your feedback will directly shape the final product and help us ensure it truly empowers the VI community.',
     startsAt: '2026-02-07T00:00:00',
     ctaLabel: 'Sign Up',
-    ctaHref: 'https://forms.gle/replace-with-beta-form',
+    ctaHref: 'https://forms.gle/MYEV7NqE4UBfFZkt7',
   },
   {
     id: 'soft-launch',
-    title: 'ObstaX Mini Soft Launch',
+    title: 'ObstaX Mini - Soft Launch',
     description: 'Register your interest today to secure early access for you or your caretaker. Get priority onboarding, the latest product updates, and an exclusive early bird discount when we launch.',
     startsAt: '2026-04-01T00:00:00',
     ctaLabel: 'Register Interest',
-    ctaHref: 'https://forms.gle/replace-with-soft-launch-form',
+    ctaHref: 'https://forms.gle/ULs82urQdHTjpYN79',
   },
 ]
 
@@ -108,8 +109,9 @@ export default function CountdownTimeline() {
                 asChild
                 className="w-full rounded-3xl border border-transparent px-6 py-4 text-base hover:border hover:bg-secondary hover:text-foreground"
               >
-                <Link href={event.ctaHref} target="_blank" rel="noreferrer">
+                <Link href={event.ctaHref} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2">
                   {event.ctaLabel}
+                  <ExternalLinkIcon className="h-4 w-4" />
                 </Link>
               </Button>
             </div>

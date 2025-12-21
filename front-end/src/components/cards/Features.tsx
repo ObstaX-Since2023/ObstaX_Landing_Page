@@ -19,38 +19,45 @@ type FeatureCardProps = {
 
 const features: FeatureCardProps[] = [
     {
-        name: "Real-Time Object Detection",
+        name: "Bus Number Identification",
         imageSrc: "/images/prod.png",
         description:
-            "Detects obstacles in your path and alerts you instantly through vibration and voice cues.",
+            "Quickly identifies the bus number through the camera and reads it aloud to help users board the correct bus confidently.",
         alt: "Object detection visualization",
     },
     {
-        name: "GPS-Free Indoor Navigation",
+        name: "Currency Note Detection",
         imageSrc: "/images/prod.png",
         description:
-            "Navigate malls, MRT stations, or HDB blocks without relying on internet or GPS signals.",
+            "Recognizes common currency denominations (e.g., SGD, MYR) and announces the amount, reducing the risk of mispayment or fraud.",
         alt: "Indoor navigation concept",
     },
     {
-        name: "Multi-Language Voice Assistant",
+        name: "Scene Recognition",
         imageSrc: "/images/prod.png",
         description:
-            "Understand your surroundings through a voice assistant that speaks in English or Mandarin.",
+            "Provides a brief description of the surrounding scene — such as “You are facing a zebra crossing” or “A person is standing in front of you.”",
         alt: "Voice assistant speaking",
     },
     {
-        name: "Wearable Haptic Feedback",
+        name: "Internet Q&A",
         imageSrc: "/images/prod.png",
         description:
-            "Smart vibrations let you feel directions and alerts intuitively, hands-free.",
+            'Ask general questions (e.g., "What time is it?" or "Where is the nearest ATM?") and receive spoken answers powered by real-time AI.',
         alt: "Haptic feedback wearable",
     },
     {
-        name: "One-Touch Help Access",
+        name: "Single Button Image Capture",
         imageSrc: "/images/prod.png",
         description:
-            "Contact caregivers or loved ones with a single button for emergencies or assistance.",
+            "Easy, tactile button allows users to capture an image at any time. The device will then process and describe the scene or answer based on the context.",
+        alt: "Help button on device",
+    },
+    {
+        name: "Bluetooth Phone Bridge (Coming Soon)",
+        imageSrc: "/images/prod.png",
+        description:
+            "Connects to a smartphone for faster responses or additional features using your phone's internet, while keeping the wearable lightweight.",
         alt: "Help button on device",
     },
 ];
