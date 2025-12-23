@@ -1,7 +1,50 @@
+import Link from 'next/link'
+import { ExternalLinkIcon } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+
 export default function Support() {
     return (
-        <div className="flex min-h-screen items-center justify-center">
-            <h1 className="text-4xl font-bold">Support us</h1>
-        </div>
+        <main className="page">
+            <section className="mt-10">
+                <h1 className="scroll-m-20 text-4xl font-bold lg:text-5xl">Support Us</h1>
+            </section>
+
+            <section className="mt-10">
+                <div className="rounded-3xl border border-border/60 bg-card/40 p-6 md:p-8">
+                    <div className="grid gap-6 md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] md:items-center">
+                        <div className="space-y-4">
+                            <h2 className="text-2xl font-semibold text-foreground">Help Blind and Visually Impaired through ObstaX</h2>
+                            <p className="text-muted-foreground">
+                                Our Give.Asia fundraiser is live and focused on our soft launch. We are already in beta testing,
+                                and we need significant financial support for manufacturing and R&amp;D to prepare a safe, reliable
+                                product for the blind and visually impaired (BVI) community.
+                            </p>
+
+                            <div className="flex flex-wrap gap-3">
+                                <Button asChild className="button w-full rounded-3xl px-8 py-4 text-sm hover:bg-secondary hover:text-foreground hover:border lg:px-10 lg:py-6 lg:text-lg">
+                                    <Link
+                                        href="https://give.asia/campaign/guide-blindvisuallyimpaired-with-obstax"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        Support us on Give.Asia
+                                        <ExternalLinkIcon />
+                                    </Link>
+                                </Button>
+                            </div>
+                        </div>
+                        <div className="overflow-hidden rounded-2xl border border-border/60 bg-muted md:ml-auto md:max-w-xs">
+                            <div className="aspect-[4/5] w-full">
+                                <img
+                                    src="/images/give-asia.png"
+                                    alt="ObstaX fundraiser preview"
+                                    className="h-full w-full object-cover"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
     )
 } 

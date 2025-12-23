@@ -10,6 +10,12 @@ import {
 } from "@/components/ui/dropdown-menu"
 
 export default function Header() {
+    const Headeritems = [
+        { label: "How it works", href: "/product" },
+        { label: "Who are we", href: "/about" },
+        { label: "Support us", href: "/support" },
+    ]
+
     return (
         <header className="sticky top-0 z-50 bg-slate-300 w-full px-8 sm:px-16 py-4">
             <div className="flex justify-between items-center max-w-7xl sm:px-16 mx-auto w-full">
@@ -20,13 +26,12 @@ export default function Header() {
 
                 <div className="flex flex-row gap-x-6">
                     <div className="flex items-center space-x-6 text-2xl">
-                        <Link href="/product" className="nav-link hidden md:flex">
-                            How it works
-                        </Link>
 
-                        <Link href="/about" className="nav-link hidden md:flex">
-                            Who are we
-                        </Link>
+                        {Headeritems.map(item => (
+                            <Link key={item.label} href={item.href} className="nav-link hidden md:flex">
+                                {item.label}
+                            </Link>
+                        ))}
 
                         {/* <Button asChild className="button hover:bg-secondary hover:text-foreground">
                             <Link href="/product/pre-order">
@@ -49,12 +54,11 @@ export default function Header() {
                                 </Button>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent className="w-40 justify-end" align="end" >
-                                <DropdownMenuItem asChild className="cursor-pointer">
-                                    <Link href="/product">How it works</Link>
-                                </DropdownMenuItem>
-                                <DropdownMenuItem asChild className="cursor-pointer">
-                                    <Link href="/about">Who are we</Link>
-                                </DropdownMenuItem>
+                                {Headeritems.map((item) => (
+                                    <DropdownMenuItem asChild className="cursor-pointer">
+                                        <Link href={item.href} id={item.label}>{item.label}</Link>
+                                    </DropdownMenuItem>
+                                ))}
                             </DropdownMenuContent>
                         </DropdownMenu>
                     </div>
