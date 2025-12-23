@@ -28,9 +28,15 @@ export default function Header() {
                             Who are we
                         </Link>
 
-                        <Button asChild className="button hover:bg-secondary hover:text-foreground">
+                        {/* <Button asChild className="button hover:bg-secondary hover:text-foreground">
                             <Link href="/product/pre-order">
                                 Pre-Order
+                            </Link>
+                        </Button> */}
+
+                        <Button asChild className="button hover:bg-secondary hover:text-foreground">
+                            <Link href="https://forms.gle/ULs82urQdHTjpYN79" target="_blank" rel="noopener noreferrer">
+                                Register Interest
                             </Link>
                         </Button>
                     </div>

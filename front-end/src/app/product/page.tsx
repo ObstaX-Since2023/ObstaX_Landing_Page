@@ -8,22 +8,21 @@ import Surveys from '@/components/cards/Surveys'
 
 export default function Product() {
     const items = [
-        "Designed for blind and visually impaired individuals seeking greater confidence and independence in their daily lives — from navigating public transport to identifying everyday items at home.",
-        "Whether you're trying to catch the right bus, identify banknotes, or understand your surroundings, ObstaX Mini delivers fast, spoken answers at the press of a button.",
-        "Just press the button — ObstaX Mini captures a photo, sends it to our AI, and delivers audio feedback within seconds. No touchscreen or phone required.",
-        "Built in close collaboration with visually impaired users, ObstaX Mini features a tactile button, clear voice output, and multilingual support for seamless accessibility.",
-        "Wear it as a pendant or clip it to your shirt — ObstaX Mini is lightweight, compact, and built to move with you wherever you go."
+        "Designed for blind and visually impaired individuals seeking greater confidence and independence in their daily lives — from navigating public transport to identifying everyday items indoor and outdoor.",
+        "Single press - Activate scene recognition in front of you",
+        "Long press - Query about your surroundings.",
+        "Country of Origin: Singapore",
     ];
 
     return (
         <main className="page">
 
             <section className='flex flex-col sm:flex-row gap-10 sm:mt-16 mt-8'>
-                <div id='itemDescription' className='sm:hidden'>
+                {/* <div id='itemDescription' className='sm:hidden'>
                     <h1 className="scroll-m-20 text-2xl font-semibold lg:text-2xl">ObstaX 1.0</h1>
                     <h4 className="scroll-m-20 text-lg font-light mt-0">Pendant and Wristbands</h4>
                     <h4 className="scroll-m-20 text-xl font-normal mt-4">S$ 609</h4>
-                </div>
+                </div> */}
 
                 <ImageGallery />
 
@@ -32,11 +31,11 @@ export default function Product() {
                         <h1 className="scroll-m-20 text-2xl font-semibold lg:text-2xl">ObstaX Mini</h1>
                         <h4 className="scroll-m-20 text-lg font-light mt-0">AI Pendant</h4>
                         {/* <h2 className="scroll-m-20 text-xl font-normal mt-4">S$ 209</h2> */}
-                        <h2 className="scroll-m-20 text-xl font-normal mt-4 text-muted-foreground">Early Bird Pricing - TBA</h2>
+                        <h2 className="scroll-m-20 text-lg font-normal mt-4 text-muted-foreground">Early Bird Pricing - TBA</h2>
                     </div>
 
                     {items.map((item, idx) => (
-                        <h4 key={idx} className="scroll-m-20 text-lg font-normal mt-4">
+                        <h4 key={idx} className="scroll-m-20 text-lg font-light mt-4">
                             {item}
                         </h4>
                     ))}
