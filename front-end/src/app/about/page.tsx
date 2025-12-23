@@ -162,7 +162,7 @@ export default function About() {
                 <div className="rounded-3xl border border-primary/20 bg-secondary/70 px-6 py-8 shadow-sm md:px-10">
                     <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
                         <div className="space-y-2">
-                            <h3 className="text-2xl font-semibold text-foreground">Let’s talk—tell us what you need.</h3>
+                            <h3 className="text-2xl font-semibold text-foreground">Let's talk—tell us what you need.</h3>
                             <p className="text-muted-foreground">
                                 We read every message and usually reply within 1-2 business days.
                             </p>
