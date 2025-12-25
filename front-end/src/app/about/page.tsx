@@ -18,7 +18,7 @@ const teamMembers = [
     },
     {
         name: 'Lam Yu En (Samuel), Co-Founder',
-        role: 'Co-founder driving AI, software, and user experience — ensuring ObstaX Mini delivers fast, accurate voice feedback in real-world conditions.',
+        role: 'Co-Founder driving software, and outreach, while building strong relationships with users and partners.',
         bio: 'Shapes human-centered product experiences with a focus on clarity and dignity.',
         imageSrc: '/images/lamyuen.jpeg',
     },
@@ -27,40 +27,30 @@ const teamMembers = [
 const awardsAndPress = [
     {
         title: 'Create4Good Innovation Funds 2024',
-        description: 'Recognized for early-stage prototypes that advance independent mobility. ',
-        imageSrc: '/images/obstax-with-pres-tharman.jpg',
+        description: 'ObstaX was awarded the Create4Good Innovation Fund 2024 in recognition of our work in developing assistive technology that addresses real-world challenges faced by the visually impaired community. The support from Create4Good has enabled us to further validate our prototype, conduct user testing, and advance the development of ObstaX Mini toward real-world deployment.',
+        imageSrc: '/images/awards/obstax-c4g.webp',
         href: 'https://sutdc4g.com/',
     },
     {
         title: 'Baby Shark Fund Jul 2024 & Mar 2025',
-        description: 'Invited to share our roadmap for accessible navigation in 2026.',
-        imageSrc: '/images/obstax-with-pres-tharman.jpg',
+        description: 'The Baby Shark Fund by SUTD VIE supports early-stage student startups in validating and developing innovative ideas. ObstaX received funding in July 2024 and March 2025 to support continued development of ObstaX Mini.',
+        imageSrc: '/images/awards/baby-shark-fund.webp',
         href: 'https://www.sutd.edu.sg/future-of-innovation/use-cases/baby-shark-fund-dai-projects/',
     },
     {
-        title: 'SUTD Student Achievement Award 2025',
-        description: 'Featured in the Q3 special on emerging assistive-tech teams in Asia.',
-        imageSrc: '/images/obstax-with-pres-tharman.jpg',
-        href: 'https://example.com/straits-innovation-review',
+        title: 'SUTD SAA 2025 - Entrepreneurial Spirit Award',
+        description: 'Recognised for demonstrating risk-taking and creativity in positively impacting the visually impaired community by enhancing accessibility and promoting independence.',
+        imageSrc: '/images/awards/saa2025.jpeg',
+        imageClassName: 'object-top',
+        href: 'https://www.sutd.edu.sg/campus-life/student-life/student-awards/student-achievement-awards/2025-winners/',
     },
     {
         title: 'SUTD InspireCon 2025',
-        description: 'Featured in the Q3 special on emerging assistive-tech teams in Asia.',
+        description: 'ObstaX was invited to showcase our work at SUTD InspireCon 2025, where we demonstrated the ObstaX Mini and pitched our vision for assistive technology directly to Tharman Shanmugaratnam. The opportunity highlighted ObstaX as a promising student-led venture focused on real-world impact, accessibility, and inclusive innovation.',
         imageSrc: '/images/obstax-with-pres-tharman.jpg',
-        href: 'https://example.com/straits-innovation-review',
+        href: 'https://www.linkedin.com/feed/update/urn:li:activity:7318182501825339393',
     },
-    {
-        title: 'SUTD Open House 2025',
-        description: 'Featured in the Q3 special on emerging assistive-tech teams in Asia.',
-        imageSrc: '/images/obstax-with-pres-tharman.jpg',
-        href: 'https://example.com/straits-innovation-review',
-    },
-    {
-        title: 'SUTD Open House 2026 (Coming Soon)',
-        description: 'Featured in the Q3 special on emerging assistive-tech teams in Asia.',
-        imageSrc: '/images/obstax-with-pres-tharman.jpg',
-        href: 'https://example.com/straits-innovation-review',
-    },
+
 ]
 
 export default function About() {
@@ -72,15 +62,18 @@ export default function About() {
                     <h1 className="scroll-m-20 text-4xl font-bold lg:text-5xl">Who Are We</h1>
                     <div className="space-y-4 text-lg text-muted-foreground">
                         <p>
-                            ObstaX is a Singapore-based company incorporated in Feb 2024, founded by a team of young talents with engineering,
-                            product design, and AI backgrounds. We build assistive technology that expands independence
-                            for people who are blind or have low vision, with a focus on safety, dignity, and intuitive
-                            everyday use.
+                            ObstaX is a Singapore-based assistive technology startup, incorporated in February 2024 and
+                            founded by a team with backgrounds in engineering, product design, and artificial intelligence (AI).
                         </p>
                         <p>
-                            Our work is grounded in lived feedback from the visually impaired community, and every
-                            prototype is shaped by real-world navigation needs. We are committed to building reliable
-                            wearables that feel natural to use and empower confident mobility.
+                            We build wearable technologies that expand independence for people who are blind or have low
+                            vision - designed with safety, dignity, and intuitive everyday use at the core.
+                        </p>
+                        <p>
+                            Our work is grounded in lived feedback from the visually impaired community. Every prototype is
+                            shaped by real-world navigation challenges and refined through hands-on testing. We are committed
+                            to creating reliable, human-centered wearables that feel natural to use and empower confident
+                            mobility in daily life.
                         </p>
                     </div>
                 </div>
@@ -94,7 +87,7 @@ export default function About() {
                 />
             </section>
 
-            <section className="mt-12">
+            <section>
                 <h2 className="section-header">Our team</h2>
                 <div id="features-scroll" className="scroll-cards">
                     {teamMembers.map((t, index) => (
@@ -119,8 +112,8 @@ export default function About() {
                 </div>
             </section>
 
-            <section className="mt-12">
-                <h2 className="section-header">Collaboration Partner</h2>
+            <section>
+                <h2 className="section-header">Collaboration partner</h2>
                 <Card className="mt-8">
                     <div className="grid gap-6 p-6 md:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)] md:items-center">
                         <div className="overflow-hidden rounded-2xl border border-border/60 bg-muted">
@@ -137,30 +130,32 @@ export default function About() {
                                 Singapore Association of the Visually Handicapped (SAVH)
                             </h3>
                             <p className="text-muted-foreground">
-                                We collaborate closely with SAVH to run beta testing for the ObstaX Mini prototype and to interview their
-                                clients, ensuring real-world feedback shapes every iteration.
+                                We have been collaborating closely with SAVH since June 2023. Through multiple rounds of
+                                validation, prototype testing, and interviews with clients of SAVH and members of the
+                                visually impaired community, we ensure that real-world feedback directly shapes every
+                                iteration of ObstaX Mini.
                             </p>
                         </div>
                     </div>
                 </Card>
             </section>
 
-            <section className="mt-12">
-                <h2 className="section-header">Awards & Press</h2>
+            <section >
+                <h2 className="section-header">Awards & press mentions</h2>
                 <div className="mt-8 space-y-6">
                     {awardsAndPress.map((item) => (
                         <Card key={item.title}>
-                            <div className="flex flex-col gap-6 p-6 md:flex-row md:items-start">
-                                <div className="h-48 w-full overflow-hidden rounded-2xl border border-border/60 bg-muted md:h-48 md:w-[40%]">
+                            <div className="flex flex-col gap-6 pl-6 pr-6 md:flex-row md:items-start">
+                                <div className="h-48 w-full overflow-hidden rounded-2xl border border-border/60 bg-muted md:h-56 md:w-[40%]">
                                     <Image
                                         src={item.imageSrc}
                                         alt={item.title}
                                         width={320}
-                                        height={240}
-                                        className="h-full w-full object-cover"
+                                        height={320}
+                                        className={`h-full w-full object-cover ${item.imageClassName || ''}`}
                                     />
                                 </div>
-                                <div className="flex flex-1 flex-col gap-3 md:min-h-[12rem]">
+                                <div className="flex flex-1 flex-col gap-3 md:min-h-[14rem]">
                                     <CardTitle className="text-xl">{item.title}</CardTitle>
                                     <p className="text-muted-foreground">{item.description}</p>
                                     <p className="mt-auto text-muted-foreground">

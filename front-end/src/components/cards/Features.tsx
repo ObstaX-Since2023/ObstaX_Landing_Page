@@ -11,7 +11,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 type FeatureCardProps = {
-    name: string;
+    title: string;
     description: string;
     imageSrc: string;
     alt?: string;
@@ -19,46 +19,46 @@ type FeatureCardProps = {
 
 const features: FeatureCardProps[] = [
     {
-        name: "Bus Number Identification",
-        imageSrc: "/images/prod.png",
+        title: 'Bus Number Identification',
         description:
-            "Quickly identifies the bus number through the camera and reads it aloud to help users board the correct bus confidently.",
-        alt: "Object detection visualization",
+            'ObstaX Mini detects approaching buses and reads the bus number aloud, so you can board the correct bus independently, without needing to stop every bus, ask the driver, or rely on people around you.',
+        imageSrc: '/images/featurelist/bus.jpg',
+        alt: 'Bus number detection visual',
     },
     {
-        name: "Currency Note Detection",
-        imageSrc: "/images/prod.png",
+        title: 'Currency Note Detection',
         description:
-            "Recognizes common currency denominations (e.g., SGD, MYR) and announces the amount, reducing the risk of mispayment or fraud.",
-        alt: "Indoor navigation concept",
+            'Instantly recognizes common currency denominations and announces the amount. It can also help you add up values or calculate change, making everyday payments easier and more accurate.',
+        imageSrc: '/images/featurelist/cash.jpg',
+        alt: 'Currency note identification visual',
     },
     {
-        name: "Scene Recognition",
-        imageSrc: "/images/prod.png",
+        title: 'Scene Recognition',
         description:
-            "Provides a brief description of the surrounding scene — such as “You are facing a zebra crossing” or “A person is standing in front of you.”",
-        alt: "Voice assistant speaking",
+            'With a single press, ObstaX Mini summarizes your immediate surroundings using clear, concise audio descriptions within seconds, to support safer navigation.',
+        imageSrc: '/images/prod.png',
+        alt: 'Scene recognition visual',
     },
     {
-        name: "Internet Q&A",
-        imageSrc: "/images/prod.png",
+        title: 'Internet Q&A',
         description:
-            'Ask general questions (e.g., "What time is it?" or "Where is the nearest ATM?") and receive spoken answers powered by real-time AI.',
-        alt: "Haptic feedback wearable",
+            'Ask everyday questions, such as the time, nearby places, or general information—and receive real-time spoken answers.',
+        imageSrc: '/images/prod.png',
+        alt: 'Voice Q&A visual',
     },
     {
-        name: "Single Button Image Capture",
-        imageSrc: "/images/prod.png",
+        title: 'One-Button Capture',
         description:
-            "Easy, tactile button allows users to capture an image at any time. The device will then process and describe the scene or answer based on the context.",
-        alt: "Help button on device",
+            'A single button captures an image and instantly explains what is in front of you. No menus, No complexity.',
+        imageSrc: '/images/prod.png',
+        alt: 'Single button capture visual',
     },
     {
-        name: "Bluetooth Phone Bridge (Coming Soon)",
-        imageSrc: "/images/prod.png",
+        title: 'Bluetooth Phone App (Coming Soon)',
         description:
-            "Connects to a smartphone for faster responses or additional features using your phone's internet, while keeping the wearable lightweight.",
-        alt: "Help button on device",
+            'Optionally connect to your phone for quicker processing, while keeping ObstaX Mini compact, lightweight, and comfortable to wear all day.',
+        imageSrc: '/images/prod.png',
+        alt: 'Bluetooth bridge visual',
     },
 ];
 
@@ -72,14 +72,14 @@ export default function FeatureCard() {
 
                         <Image
                             src={t.imageSrc}
-                            alt={t.alt || t.name}
+                            alt={t.alt || t.title}
                             width={400}
                             height={200}
                             className="object-cover w-full h-48"
                         />
 
                         <CardHeader>
-                            <CardTitle>{t.name}</CardTitle>
+                            <CardTitle>{t.title}</CardTitle>
                         </CardHeader>
 
                         <CardContent>

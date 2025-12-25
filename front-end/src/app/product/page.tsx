@@ -63,8 +63,8 @@ export default function Product() {
                 <h2 className='section-header' id='features'>Features</h2>
                 <FeatureCard />
 
-                <h2 className='section-header' id='surveys'>Surveys</h2>
-                <Surveys />
+                {/* <h2 className='section-header' id='surveys'>Surveys</h2>
+                <Surveys /> */}
             </section>
         </main >
     )
