@@ -13,8 +13,8 @@ export default function Home() {
     <main className="page">
 
       {/* Hero Section */}
-      <section className="sm:flex min-h-[calc(100vh-64px-160px)] sm:space-x-16">
-        <div className="flex flex-col flex-1 justify-center text-balance">
+      <section className="flex min-h-[calc(100vh-64px-160px)] flex-col gap-2 sm:flex-row sm:gap-16">
+        <div className="order-2 flex flex-1 flex-col justify-center text-balance sm:order-1">
 
           <h1 className="scroll-m-20 text-xl font-medium lg:text-2xl mt-12">ObstaX Mini: AI Pendant</h1>
           <h1 className="scroll-m-20 text-4xl font-bold mt-2 lg:mt-4 lg:text-6xl">Safety,</h1>
@@ -37,7 +37,7 @@ export default function Home() {
           </Button>
         </div>
 
-        <div className="flex flex-col flex-1 justify-center mt-12 sm:mt-0">
+        <div className="order-1 flex flex-1 flex-col justify-center sm:order-2">
           <Image
             priority={true}
             src="/images/obstax_mini_prodct_image_2.JPG"

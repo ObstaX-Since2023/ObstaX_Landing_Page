@@ -19,11 +19,11 @@ export default function Product() {
         <main className="page">
 
             <section className='flex flex-col sm:flex-row gap-10 sm:mt-16 mt-8'>
-                {/* <div id='itemDescription' className='sm:hidden'>
-                    <h1 className="scroll-m-20 text-2xl font-semibold lg:text-2xl">ObstaX 1.0</h1>
-                    <h4 className="scroll-m-20 text-lg font-light mt-0">Pendant and Wristbands</h4>
-                    <h4 className="scroll-m-20 text-xl font-normal mt-4">S$ 609</h4>
-                </div> */}
+                <div id='itemDescription' className='sm:hidden'>
+                    <h1 className="scroll-m-20 text-2xl font-semibold lg:text-2xl">ObstaX Mini</h1>
+                    <h4 className="scroll-m-20 text-lg font-light mt-0">AI-Powered Wearable Pendant</h4>
+                    <h2 className="scroll-m-20 text-lg font-normal mt-4 text-muted-foreground">Early Bird Pricing - To be announced</h2>
+                </div>
 
                 <ImageGallery />
 

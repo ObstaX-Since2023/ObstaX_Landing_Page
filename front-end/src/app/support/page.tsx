@@ -12,9 +12,9 @@ export default function Support() {
             <section className="mt-10">
                 <div className="rounded-3xl border border-border/60 bg-card/40 p-6 md:p-8">
                     <div className="grid gap-6 md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] md:items-start">
-                        <div className="space-y-8">
-                            <h2 className="text-4xl font-semibold text-foreground">Help Blind and Visually Impaired through ObstaX</h2>
-                            <p className="text-muted-foreground text-2xl">
+                        <div className="space-y-6">
+                            <h2 className="text-2xl font-semibold text-foreground md:text-4xl">Help Blind and Visually Impaired through ObstaX</h2>
+                            <p className="text-base text-muted-foreground md:text-2xl">
                                 Our Give.Asia fundraiser is live and focused on our soft launch. We are already in beta testing,
                                 and we need significant financial support for manufacturing and R&amp;D to prepare a safe, reliable
                                 product for the blind and visually impaired (BVI) community.

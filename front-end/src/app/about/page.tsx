@@ -89,9 +89,9 @@ export default function About() {
 
             <section>
                 <h2 className="section-header">Our team</h2>
-                <div id="features-scroll" className="scroll-cards">
+                <div id="features-scroll" className="mt-8 flex flex-col gap-6 md:flex-row md:gap-3 md:overflow-x-auto md:scroll-smooth md:no-scrollbar">
                     {teamMembers.map((t, index) => (
-                        <Card key={index} className="w-80 min-h-40 md:min-h-60 flex-shrink-0 m-1">
+                        <Card key={index} className="md:w-80 md:min-h-60 md:flex-shrink-0">
                             <Image
                                 src={t.imageSrc}
                                 alt={t.name}

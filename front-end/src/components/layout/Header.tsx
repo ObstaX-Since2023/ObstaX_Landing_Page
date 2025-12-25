@@ -28,7 +28,7 @@ export default function Header() {
                     <div className="flex items-center space-x-6 text-2xl">
 
                         {Headeritems.map(item => (
-                            <Link key={item.label} href={item.href} className="nav-link hidden md:flex">
+                            <Link key={item.label} id={item.label} href={item.href} className="nav-link hidden md:flex">
                                 {item.label}
                             </Link>
                         ))}
@@ -56,7 +56,7 @@ export default function Header() {
                             <DropdownMenuContent className="w-40 justify-end" align="end" >
                                 {Headeritems.map((item) => (
                                     <DropdownMenuItem asChild className="cursor-pointer">
-                                        <Link href={item.href} key={item.label}>{item.label}</Link>
+                                        <Link href={item.href} id={item.label} key={item.label}>{item.label}</Link>
                                     </DropdownMenuItem>
                                 ))}
                             </DropdownMenuContent>
