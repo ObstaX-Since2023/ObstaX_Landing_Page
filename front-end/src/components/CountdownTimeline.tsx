@@ -60,8 +60,10 @@ const CountdownSegment = ({ value, label }: { value: number; label: string }) =>
 
 export default function CountdownTimeline() {
   const [now, setNow] = useState(() => Date.now())
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
     const interval = setInterval(() => setNow(Date.now()), 1000)
     return () => clearInterval(interval)
   }, [])
@@ -79,7 +81,9 @@ export default function CountdownTimeline() {
   return (
     <div className="mt-8 space-y-6">
       {formattedEvents.map((event) => {
-        const timeLeft = getTimeLeft(event.targetMs, now)
+        const timeLeft = mounted
+          ? getTimeLeft(event.targetMs, now)
+          : { days: 0, hours: 0, minutes: 0, seconds: 0, isLive: false }
 
         return (
           <div

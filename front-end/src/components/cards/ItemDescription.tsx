@@ -20,7 +20,7 @@ export default function ItemDescriptions() {
     {
       icon: <BatteryFullIcon size={48} />,
       title: "Battery Life",
-      value: "Lasts up to 4-6 hours",
+      value: "Lasts up to 6-8 hours",
     },
   ];
 

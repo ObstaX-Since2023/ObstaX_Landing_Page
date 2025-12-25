@@ -6,6 +6,7 @@ import { ArrowDownIcon, ArrowRightIcon } from 'lucide-react'
 import TestimonialCard from '@/components/cards/Testimonials'
 import FeatureCard from '@/components/cards/Features'
 import CountdownTimeline from '@/components/CountdownTimeline'
+import FeatureList from '@/components/FeatureList'
 
 export default function Home() {
   return (
@@ -54,11 +55,12 @@ export default function Home() {
         <h2 className="section-header" id="timeline">Our timeline</h2>
         <CountdownTimeline />
 
-        <h2 className="section-header" id="testimonial">Testimonials</h2>
-        <TestimonialCard />
+        {/* <h2 className="section-header" id="testimonial">Testimonials</h2>
+        <TestimonialCard /> */}
 
-        <h2 className="section-header" id="features">Product features</h2>
-        <FeatureCard />
+        <h2 className="section-header" id="features">Product key features</h2>
+        {/* <FeatureCard /> */}
+        <FeatureList />
       </section>
 
     </main>

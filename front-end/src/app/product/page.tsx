@@ -8,9 +8,10 @@ import Surveys from '@/components/cards/Surveys'
 
 export default function Product() {
     const items = [
-        "Designed for blind and visually impaired individuals seeking greater confidence and independence in their daily lives — from navigating public transport to identifying everyday items indoor and outdoor.",
-        "Single press - Activate scene recognition in front of you",
-        "Long press - Query about your surroundings.",
+        "ObstaX Mini is a lightweight, wearable AI pendant built for blind and visually impaired individuals. With a simple button press, it helps you understand what's around you, whether you're navigating public transport, identifying everyday items, or exploring new environments indoors and outdoors.",
+        "Single press - Capture what's in front of you and receive a clear spoken description of your surroundings within seconds.",
+        "Long press - Ask a question about what you're seeing or your environment and get a spoken response.",
+        " ",
         "Country of Origin: Singapore",
     ];
 
@@ -29,9 +30,8 @@ export default function Product() {
                 <div id='descriptionColumn' className='flex flex-col sm:w-120'>
                     <div id='itemDescription' className='hidden sm:inline'>
                         <h1 className="scroll-m-20 text-2xl font-semibold lg:text-2xl">ObstaX Mini</h1>
-                        <h4 className="scroll-m-20 text-lg font-light mt-0">AI Pendant</h4>
-                        {/* <h2 className="scroll-m-20 text-xl font-normal mt-4">S$ 209</h2> */}
-                        <h2 className="scroll-m-20 text-lg font-normal mt-4 text-muted-foreground">Early Bird Pricing - TBA</h2>
+                        <h4 className="scroll-m-20 text-lg font-light mt-0">AI-Powered Wearable Pendant</h4>
+                        <h2 className="scroll-m-20 text-lg font-normal mt-4 text-muted-foreground">Early Bird Pricing - To be announced</h2>
                     </div>
 
                     {items.map((item, idx) => (
@@ -40,14 +40,13 @@ export default function Product() {
                         </h4>
                     ))}
 
-
-
                     {/* <Button asChild className="button hover:bg-secondary hover:text-foreground hover:border py-4 lg:py-6 lg:text-lg rounded-3xl [&:not(:first-child)]:mt-12">
                         <Link href="/product/pre-order">
                             Pre-Order Now
                             <ArrowRightIcon />
                         </Link>
                     </Button> */}
+
                     <Button asChild className="button hover:bg-secondary hover:text-foreground hover:border py-4 lg:py-6 lg:text-lg rounded-3xl [&:not(:first-child)]:mt-12">
                         <Link href="https://forms.gle/ULs82urQdHTjpYN79" target="_blank" rel="noopener noreferrer">
                             Register Interest

@@ -66,7 +66,7 @@ const features: FeatureCardProps[] = [
 export default function FeatureCard() {
     return (
         <>
-            <div id="features-scroll" className="scroll-cards no-scrollbar">
+            <div id="features-scroll" className="mt-6 flex gap-3 overflow-x-auto scroll-smooth no-scrollbar">
                 {features.map((t, index) => (
                     <Card key={index} className="w-80 min-h-40 md:min-h-60 flex-shrink-0 m-1">
 

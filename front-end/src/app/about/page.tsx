@@ -94,9 +94,9 @@ export default function About() {
                 />
             </section>
 
-            <section className="mt-16">
+            <section className="mt-12">
                 <h2 className="section-header">Our team</h2>
-                <div id="features-scroll" className="scroll-cards no-scrollbar">
+                <div id="features-scroll" className="scroll-cards">
                     {teamMembers.map((t, index) => (
                         <Card key={index} className="w-80 min-h-40 md:min-h-60 flex-shrink-0 m-1">
                             <Image
@@ -117,10 +117,35 @@ export default function About() {
                         </Card>
                     ))}
                 </div>
-
             </section>
 
-            <section className="mt-16">
+            <section className="mt-12">
+                <h2 className="section-header">Collaboration Partner</h2>
+                <Card className="mt-8">
+                    <div className="grid gap-6 p-6 md:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)] md:items-center">
+                        <div className="overflow-hidden rounded-2xl border border-border/60 bg-muted">
+                            <Image
+                                src="/images/savh-logo.png"
+                                alt="Singapore Association of the Visually Handicapped (SAVH) logo"
+                                width={360}
+                                height={240}
+                                className="h-full w-full object-contain bg-white p-6"
+                            />
+                        </div>
+                        <div className="space-y-3">
+                            <h3 className="text-2xl font-semibold text-foreground">
+                                Singapore Association of the Visually Handicapped (SAVH)
+                            </h3>
+                            <p className="text-muted-foreground">
+                                We collaborate closely with SAVH to run beta testing for the ObstaX Mini prototype and to interview their
+                                clients, ensuring real-world feedback shapes every iteration.
+                            </p>
+                        </div>
+                    </div>
+                </Card>
+            </section>
+
+            <section className="mt-12">
                 <h2 className="section-header">Awards & Press</h2>
                 <div className="mt-8 space-y-6">
                     {awardsAndPress.map((item) => (
@@ -158,17 +183,16 @@ export default function About() {
                 </div>
             </section>
 
-            <section className="mt-16 mb-20">
-                <div className="rounded-3xl border border-primary/20 bg-secondary/70 px-6 py-8 shadow-sm md:px-10">
+            <section className="mt-12 mb-16">
+                <div className="rounded-3xl border border-primary/30 bg-gradient-to-r from-primary/10 via-secondary/70 to-transparent px-6 py-8 shadow-lg ring-1 ring-primary/20 md:px-10">
                     <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
                         <div className="space-y-2">
-                            <h3 className="text-2xl font-semibold text-foreground">Let's talk—tell us what you need.</h3>
+                            <h3 className="text-2xl font-semibold text-foreground">Any Inquiry? Feel free to contact us</h3>
                             <p className="text-muted-foreground">
-                                We read every message and usually reply within 1-2 business days.
+                                We typically reply within 1-2 business days.
                             </p>
                         </div>
                         <Button
-                            asChild
                             className="rounded-3xl px-8 py-6 text-base hover:bg-secondary hover:text-foreground hover:border"
                         >
                             <a href="mailto:obstax@outlook.com">Open mail app</a>
