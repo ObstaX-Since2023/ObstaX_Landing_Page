@@ -24,6 +24,19 @@ const teamMembers = [
     },
 ]
 
+const collaborationPartner = [
+    {
+        name: 'Singapore Association of the Visually Handicapped (SAVH)',
+        description: 'We have been collaborating closely with SAVH since June 2023. Through multiple rounds of validation, prototype testing, and interviews with clients of SAVH and members of the visually impaired community, we ensure that real-world feedback directly shapes every iteration of ObstaX Mini.',
+        imageSrc: '/images/savh-logo.png',
+    },
+    {
+        name: "SUTD Venture, Innovation & Entrepreneurship",
+        description: "SUTD VIE has been an invaluable partner in our journey, providing mentorship, resources, and funding opportunities that have propelled ObstaX from concept to prototype. Their support has enabled us to refine our technology, validate our ideas, and connect with a broader network of innovators and industry experts.",
+        imageSrc: '/images/sutd-vie-logo.png',
+    }
+]
+
 const awardsAndPress = [
     {
         title: 'Create4Good Innovation Funds 2024',
@@ -97,7 +110,7 @@ export default function About() {
                                 alt={t.name}
                                 width={400}
                                 height={200}
-                                className="h-64 w-full object-contain bg-muted"
+                                className="h-64 w-full object-contain "
                             />
 
                             <CardHeader>
@@ -114,33 +127,34 @@ export default function About() {
 
             <section>
                 <h2 className="section-header">Collaboration partner</h2>
-                <Card className="mt-8">
-                    <div className="grid gap-6 p-6 md:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)] md:items-center">
-                        <div className="overflow-hidden rounded-2xl border border-border/60 bg-muted">
-                            <Image
-                                src="/images/savh-logo.png"
-                                alt="Singapore Association of the Visually Handicapped (SAVH) logo"
-                                width={360}
-                                height={240}
-                                className="h-full w-full object-contain bg-white p-6"
-                            />
+                {collaborationPartner.map((partner) => (
+                    <Card className="mt-8" key={partner.name}>
+                        <div className="grid gap-6 p-6 md:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)] md:items-center">
+                            <div className="overflow-hidden rounded-2xl border border-border/60 bg-muted">
+                                <Image
+                                    src={partner.imageSrc}
+                                    alt={partner.name}
+                                    width={360}
+                                    height={240}
+                                    className="h-full w-full object-contain bg-white p-6"
+                                />
+                            </div>
+                            <div className="space-y-3">
+                                <h3 className="text-2xl font-semibold text-foreground">
+                                    {partner.name}
+                                </h3>
+                                <p className="text-muted-foreground">
+                                    {partner.description}
+                                </p>
+
+                            </div>
                         </div>
-                        <div className="space-y-3">
-                            <h3 className="text-2xl font-semibold text-foreground">
-                                Singapore Association of the Visually Handicapped (SAVH)
-                            </h3>
-                            <p className="text-muted-foreground">
-                                We have been collaborating closely with SAVH since June 2023. Through multiple rounds of
-                                validation, prototype testing, and interviews with clients of SAVH and members of the
-                                visually impaired community, we ensure that real-world feedback directly shapes every
-                                iteration of ObstaX Mini.
-                            </p>
-                        </div>
-                    </div>
-                </Card>
+
+                    </Card>
+                ))}
             </section>
 
-            <section >
+            <section>
                 <h2 className="section-header">Awards & press mentions</h2>
                 <div className="mt-8 space-y-6">
                     {awardsAndPress.map((item) => (

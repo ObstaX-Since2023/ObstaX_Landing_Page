@@ -6,12 +6,10 @@ import Image from 'next/image'
 import { useState } from 'react'
 
 const images: string[] = [
-    "/images/obstax_mini_prodct_image_2.JPG",
-    "/images/prod4.webp",
-    "/images/prod.png",
-    "/images/prod4.webp",
-    "/images/prod.png",
-    "/images/obstax_mini_prodct_image.JPG",
+    "/images/product/obstax-main-pic.png",
+    "/images/product/obstax-mini-1.jpeg",
+    "/images/product/obstax-main-pic.png",
+    "/images/product/obstax-mini-1.jpeg",
 ]
 
 export default function ImageGallery() {
@@ -30,7 +28,7 @@ export default function ImageGallery() {
                 src={images[current]}
                 alt={`Main image ${current + 1}`}
                 fill
-                className="object-contain rounded-md border"
+                className="object-cover rounded-md border"
             />
 
             <div className="absolute bottom-4 right-4">

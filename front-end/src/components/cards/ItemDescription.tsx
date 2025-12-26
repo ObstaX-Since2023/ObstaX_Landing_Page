@@ -10,17 +10,17 @@ export default function ItemDescriptions() {
     {
       icon: <BoxIcon size={48} />,
       title: "Item Dimensions",
-      value: "10.5 x 5.5 x 2.5 cm",
+      value: "33 x 33 x 42 mm",
     },
     {
       icon: <WeightIcon size={48} />,
       title: "Weight",
-      value: "Approx. 263g",
+      value: "Approx. 52g",
     },
     {
       icon: <BatteryFullIcon size={48} />,
       title: "Battery Life",
-      value: "Lasts up to 6-8 hours",
+      value: "Lasts up to 4 hours",
     },
   ];
 

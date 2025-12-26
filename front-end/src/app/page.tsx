@@ -17,7 +17,7 @@ export default function Home() {
         <div className="order-2 flex flex-1 flex-col justify-center text-balance sm:order-1">
 
           <h1 className="scroll-m-20 text-xl font-medium lg:text-2xl mt-12">ObstaX Mini: AI Pendant</h1>
-          <h1 className="scroll-m-20 text-4xl font-bold mt-2 lg:mt-4 lg:text-6xl">Safety,</h1>
+          <h1 className="scroll-m-20 text-4xl font-bold mt-2 lg:mt-4 lg:text-6xl">Confidence,</h1>
           <h1 className="scroll-m-20 text-4xl font-bold mt-1 lg:mt-2 lg:text-6xl">Independence,</h1>
           <h2 className="scroll-m-20 text-4xl font-normal italic mt-2 lg:mt-4 lg:text-6xl">Made for You.</h2>
 
@@ -40,7 +40,9 @@ export default function Home() {
         <div className="order-1 flex flex-1 flex-col justify-center sm:order-2">
           <Image
             priority={true}
-            src="/images/obstax_mini_prodct_image_2.JPG"
+            // src="/images/obstax_mini_prodct_image_2.JPG"
+            src="/images/obstax-main-pic-graybg.png"
+            // src="/images/obstax-main-pic.png"
             width={600}
             height={600}
             min-width={400}
