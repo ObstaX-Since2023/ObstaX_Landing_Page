@@ -121,6 +121,42 @@
   }
 }
 
+.page{
+  @apply flex max-w-full lg:max-w-7xl min-w-[375px] flex-col px-8 sm:px-16 justify-self-center
+}
+
 .nav-link {
-  @apply text-sm font-medium hover:underline transition;
+  @apply text-base font-medium hover:underline transition;
+}
+
+.footer-link {
+  @apply text-base font-medium text-gray-800 hover:text-gray-600 mb-3
+}
+
+.footer-external-link {
+  @apply text-base font-normal underline text-gray-800 hover:text-gray-600 mb-3
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scroll-cards {
+  @apply flex gap-3 overflow-x-hidden pointer-events-none scroll-smooth mt-6
+}
+
+.scroll-button {
+  @apply px-4 py-1 bg-gray-200 rounded
+}
+
+.section-header {
+  @apply scroll-m-20 text-3xl font-bold mt-16 lg:text-4xl
+}
+
+.button {
+  @apply cursor-pointer disabled:bg-slate-100 disabled:cursor-not-allowed
 }

@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 // SEO Metadata
 export const metadata: Metadata = {
-  title: "ObstaX",
+  title: "ObstaX. AI Navigation for the Visually Impaired",
   description: "Assistive Navigation Device for the Blind and Visually Impaired in Singapore",
 };
 
@@ -15,9 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-w-[375px]">
+      <body className="min-w-[375px] bg-primary-foreground">
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
