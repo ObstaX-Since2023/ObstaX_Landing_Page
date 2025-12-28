@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import {
@@ -7,6 +8,35 @@ import {
     CardTitle,
 } from '@/components/ui/card'
 import PreviewImage from '@/components/PreviewImage'
+
+export const metadata: Metadata = {
+    title: 'About ObstaX | Our Mission and Team',
+    description:
+        'Meet the ObstaX team and learn how we build assistive wearable technology with the visually impaired community.',
+    openGraph: {
+        title: 'About ObstaX | Our Mission and Team',
+        description:
+            'Meet the ObstaX team and learn how we build assistive wearable technology with the visually impaired community.',
+        url: '/about',
+        siteName: 'ObstaX',
+        images: [
+            {
+                url: '/images/og/obstax-about.png',
+                width: 1200,
+                height: 630,
+                alt: 'ObstaX team and collaboration partners',
+            },
+        ],
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'About ObstaX | Our Mission and Team',
+        description:
+            'Meet the ObstaX team and learn how we build assistive wearable technology with the visually impaired community.',
+        images: ['/images/og/obstax-about.png'],
+    },
+}
 
 
 const teamMembers = [

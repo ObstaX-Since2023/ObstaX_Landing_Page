@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
@@ -7,6 +8,35 @@ import TestimonialCard from '@/components/cards/Testimonials'
 import FeatureCard from '@/components/cards/Features'
 import CountdownTimeline from '@/components/CountdownTimeline'
 import FeatureList from '@/components/FeatureList'
+
+export const metadata: Metadata = {
+  title: 'ObstaX | Assistive Wearables for the Visually Impaired',
+  description:
+    'ObstaX builds AI-powered wearable technology that helps blind and visually impaired users navigate with confidence.',
+  openGraph: {
+    title: 'ObstaX | Assistive Wearables for the Visually Impaired',
+    description:
+      'ObstaX builds AI-powered wearable technology that helps blind and visually impaired users navigate with confidence.',
+    url: '/',
+    siteName: 'ObstaX',
+    images: [
+      {
+        url: '/images/og/obstax-home.png',
+        width: 1200,
+        height: 630,
+        alt: 'ObstaX wearable assistive technology',
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ObstaX | Assistive Wearables for the Visually Impaired',
+    description:
+      'ObstaX builds AI-powered wearable technology that helps blind and visually impaired users navigate with confidence.',
+    images: ['/images/og/obstax-home.png'],
+  },
+}
 
 export default function Home() {
   return (
