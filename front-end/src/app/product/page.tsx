@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ExternalLinkIcon } from 'lucide-react'
@@ -6,7 +7,52 @@ import ItemDescriptions from '@/components/cards/ItemDescription'
 import FeatureCard from '@/components/cards/Features'
 import Surveys from '@/components/cards/Surveys'
 
+export const metadata: Metadata = {
+    title: 'ObstaX Mini | AI Wearable Pendant',
+    description:
+        'Explore ObstaX Mini, an AI-powered wearable pendant designed for blind and visually impaired users.',
+    openGraph: {
+        title: 'ObstaX Mini | AI Wearable Pendant',
+        description:
+            'Explore ObstaX Mini, an AI-powered wearable pendant designed for blind and visually impaired users.',
+        url: '/product',
+        siteName: 'ObstaX',
+        images: [
+            {
+                url: '/images/og/obstax-product.png',
+                width: 1200,
+                height: 630,
+                alt: 'ObstaX Mini AI wearable pendant',
+            },
+        ],
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'ObstaX Mini | AI Wearable Pendant',
+        description:
+            'Explore ObstaX Mini, an AI-powered wearable pendant designed for blind and visually impaired users.',
+        images: ['/images/og/obstax-product.png'],
+    },
+}
+
 export default function Product() {
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://obstax.sg'
+    const productJsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: 'ObstaX Mini',
+        description:
+            'AI-powered wearable pendant designed for blind and visually impaired users.',
+        image: [`${siteUrl}/images/og/obstax-product.png`],
+        brand: {
+            '@type': 'Brand',
+            name: 'ObstaX',
+        },
+        url: `${siteUrl}/product`,
+        category: 'Assistive Technology',
+    }
+
     const items = [
         "ObstaX Mini is a lightweight, wearable AI pendant built for blind and visually impaired individuals. With a simple button press, it helps you understand what's around you, whether you're navigating public transport, identifying everyday items, or exploring new environments indoors and outdoors.",
         "Single press - Capture what's in front of you and receive a clear spoken description of your surroundings within seconds.",
@@ -17,6 +63,10 @@ export default function Product() {
 
     return (
         <main className="page">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+            />
 
             <section className='flex flex-col sm:flex-row gap-10 sm:mt-16 mt-8'>
                 <div id='itemDescription' className='sm:hidden'>

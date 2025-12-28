@@ -1,3 +1,34 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'ObstaX | Privacy Policy',
+    description:
+        'Learn how ObstaX collects, uses, and protects your information when you sign up or participate in beta testing.',
+    openGraph: {
+        title: 'ObstaX | Privacy Policy',
+        description:
+            'Learn how ObstaX collects, uses, and protects your information when you sign up or participate in beta testing.',
+        url: '/privacy',
+        siteName: 'ObstaX',
+        images: [
+            {
+                url: '/images/og/obstax-privacy.png',
+                width: 1200,
+                height: 630,
+                alt: 'ObstaX privacy policy',
+            },
+        ],
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'ObstaX | Privacy Policy',
+        description:
+            'Learn how ObstaX collects, uses, and protects your information when you sign up or participate in beta testing.',
+        images: ['/images/og/obstax-privacy.png'],
+    },
+}
+
 export default function Privacy() {
     return (
         <main className="page">
