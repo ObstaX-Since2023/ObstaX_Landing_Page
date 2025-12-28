@@ -53,13 +53,13 @@ const features: FeatureCardProps[] = [
         imageSrc: '/images/featurelist/one-button.png',
         alt: 'Single button capture visual',
     },
-    {
-        title: 'Bluetooth Phone App (Coming Soon)',
-        description:
-            'Optionally connect to your phone for quicker processing, while keeping ObstaX Mini compact, lightweight, and comfortable to wear all day.',
-        imageSrc: '/images/featurelist/bluetooth-app.png',
-        alt: 'Bluetooth bridge visual',
-    },
+    // {
+    //     title: 'Bluetooth Phone App (Coming Soon)',
+    //     description:
+    //         'Optionally connect to your phone for quicker processing, while keeping ObstaX Mini compact, lightweight, and comfortable to wear all day.',
+    //     imageSrc: '/images/featurelist/bluetooth-app.png',
+    //     alt: 'Bluetooth bridge visual',
+    // },
 ];
 
 
