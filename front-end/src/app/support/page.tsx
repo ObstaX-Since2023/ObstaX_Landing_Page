@@ -1,6 +1,36 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ExternalLinkIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+
+export const metadata: Metadata = {
+    title: 'Support ObstaX | Fundraiser',
+    description:
+        'Support ObstaX as we prepare for soft launch with manufacturing and R&D for the BVI community.',
+    openGraph: {
+        title: 'Support ObstaX | Fundraiser',
+        description:
+            'Support ObstaX as we prepare for soft launch with manufacturing and R&D for the BVI community.',
+        url: '/support',
+        siteName: 'ObstaX',
+        images: [
+            {
+                url: '/images/og/obstax-support.png',
+                width: 1200,
+                height: 630,
+                alt: 'Support ObstaX fundraiser',
+            },
+        ],
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Support ObstaX | Fundraiser',
+        description:
+            'Support ObstaX as we prepare for soft launch with manufacturing and R&D for the BVI community.',
+        images: ['/images/og/obstax-support.png'],
+    },
+}
 
 export default function Support() {
     return (

@@ -1,3 +1,34 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'ObstaX | Terms & Conditions',
+    description:
+        'Read the ObstaX Terms & Conditions covering site use, beta testing, product disclaimers, and liability.',
+    openGraph: {
+        title: 'ObstaX | Terms & Conditions',
+        description:
+            'Read the ObstaX Terms & Conditions covering site use, beta testing, product disclaimers, and liability.',
+        url: '/terms',
+        siteName: 'ObstaX',
+        images: [
+            {
+                url: '/images/og/obstax-terms.png',
+                width: 1200,
+                height: 630,
+                alt: 'ObstaX terms and conditions',
+            },
+        ],
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'ObstaX | Terms & Conditions',
+        description:
+            'Read the ObstaX Terms & Conditions covering site use, beta testing, product disclaimers, and liability.',
+        images: ['/images/og/obstax-terms.png'],
+    },
+}
+
 export default function Terms() {
     return (
         <main className="page">
