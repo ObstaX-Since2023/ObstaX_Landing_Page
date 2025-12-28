@@ -10,30 +10,43 @@ import {
 } from "@/components/ui/dropdown-menu"
 
 export default function Header() {
-    return (
-        <header className="sticky top-0 z-50 bg-slate-300 w-full px-8 py-4">
-            <div className="flex justify-between items-center max-w-2xl mx-auto w-full">
+    const Headeritems = [
+        { label: "How it works", href: "/product" },
+        { label: "Who are we", href: "/about" },
+        { label: "Support us", href: "/support" },
+    ]
 
-                <Link href="/" className="text-xl font-bold">
+    return (
+        <header className="sticky top-0 z-50 bg-slate-300 w-full px-8 sm:px-16 py-4">
+            <div className="flex justify-between items-center max-w-7xl sm:px-16 mx-auto w-full">
+
+                <Link href="/" className="text-2xl font-bold">
                     ObstaX
                 </Link>
 
-                <div className="flex items-center space-x-6">
-                    <Link href="/product" className="text-sm font-medium hidden sm:flex">
-                        How it works
-                    </Link>
+                <div className="flex flex-row gap-x-6">
+                    <div className="flex items-center space-x-6 text-2xl">
 
-                    <Link href="/about" className="text-sm font-medium hidden sm:flex">
-                        Who are we
-                    </Link>
+                        {Headeritems.map(item => (
+                            <Link key={item.label} id={item.label} href={item.href} className="nav-link hidden md:flex">
+                                {item.label}
+                            </Link>
+                        ))}
 
-                    <Button asChild>
-                        <Link href="/product/pre-order">
-                            Pre-Order
-                        </Link>
-                    </Button>
+                        {/* <Button asChild className="button hover:bg-secondary hover:text-foreground">
+                            <Link href="/product/pre-order">
+                                Pre-Order
+                            </Link>
+                        </Button> */}
 
-                    <div className="sm:hidden">
+                        <Button asChild className="button hover:bg-secondary hover:text-foreground">
+                            <Link href="https://forms.gle/ULs82urQdHTjpYN79" target="_blank" rel="noopener noreferrer">
+                                Register Interest
+                            </Link>
+                        </Button>
+                    </div>
+
+                    <div className="md:hidden">
                         <DropdownMenu modal={false}>
                             <DropdownMenuTrigger asChild>
                                 <Button variant="outline" size="icon">
@@ -41,16 +54,16 @@ export default function Header() {
                                 </Button>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent className="w-40 justify-end" align="end" >
-                                <DropdownMenuItem asChild className="cursor-pointer">
-                                    <Link href="/product">How it works</Link>
-                                </DropdownMenuItem>
-                                <DropdownMenuItem asChild className="cursor-pointer">
-                                    <Link href="/about">Who are we</Link>
-                                </DropdownMenuItem>
+                                {Headeritems.map((item) => (
+                                    <DropdownMenuItem asChild className="cursor-pointer">
+                                        <Link href={item.href} id={item.label} key={item.label}>{item.label}</Link>
+                                    </DropdownMenuItem>
+                                ))}
                             </DropdownMenuContent>
                         </DropdownMenu>
                     </div>
                 </div>
+
             </div>
         </header>
     )
