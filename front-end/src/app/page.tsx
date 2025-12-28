@@ -4,8 +4,6 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ArrowDownIcon, ArrowRightIcon } from 'lucide-react'
 
-import TestimonialCard from '@/components/cards/Testimonials'
-import FeatureCard from '@/components/cards/Features'
 import CountdownTimeline from '@/components/CountdownTimeline'
 import FeatureList from '@/components/FeatureList'
 

@@ -113,10 +113,10 @@ export default function About() {
                             vision - designed with safety, dignity, and intuitive everyday use at the core.
                         </p>
                         <p>
-                            Our work is grounded in lived feedback from the visually impaired community. Every prototype is
-                            shaped by real-world navigation challenges and refined through hands-on testing. We are committed
-                            to creating reliable, human-centered wearables that feel natural to use and empower confident
-                            mobility in daily life.
+                            Our work is grounded in direct, first-hand feedback from the visually impaired community.
+                            Every prototype is shaped by real-world navigation challenges and refined through hands-on
+                            testing. We are committed to creating reliable, human-centered wearables that feel natural to
+                            use and empower confident mobility in daily life.
                         </p>
                     </div>
                 </div>

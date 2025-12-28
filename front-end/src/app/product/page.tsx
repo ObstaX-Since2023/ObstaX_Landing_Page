@@ -37,18 +37,19 @@ export const metadata: Metadata = {
 }
 
 export default function Product() {
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://obstax.sg'
     const productJsonLd = {
         '@context': 'https://schema.org',
         '@type': 'Product',
         name: 'ObstaX Mini',
         description:
             'AI-powered wearable pendant designed for blind and visually impaired users.',
-        image: ['https://obstax.com/images/og/obstax-product.png'],
+        image: [`${siteUrl}/images/og/obstax-product.png`],
         brand: {
             '@type': 'Brand',
             name: 'ObstaX',
         },
-        url: 'https://obstax.com/product',
+        url: `${siteUrl}/product`,
         category: 'Assistive Technology',
     }
 
