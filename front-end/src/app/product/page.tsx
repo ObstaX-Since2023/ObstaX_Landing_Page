@@ -57,8 +57,8 @@ export default function Product() {
             </section>
 
             <section>
-                <h2 className="section-header" id='description'>Item descriptions</h2>
-                <ItemDescriptions />
+                {/* <h2 className="section-header" id='description'>Item descriptions</h2>
+                <ItemDescriptions /> */}
 
                 <h2 className='section-header' id='features'>Features</h2>
                 <FeatureCard />
