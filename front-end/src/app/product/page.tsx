@@ -110,7 +110,7 @@ export default function Product() {
                 {/* <h2 className="section-header" id='description'>Item descriptions</h2>
                 <ItemDescriptions /> */}
 
-                <h2 className='section-header' id='features'>Features</h2>
+                <h2 className='section-header' id='features'>Product Features</h2>
                 <FeatureCard />
 
                 {/* <h2 className='section-header' id='surveys'>Surveys</h2>

@@ -6,6 +6,7 @@ import { ArrowDownIcon, ArrowRightIcon } from 'lucide-react'
 
 import CountdownTimeline from '@/components/CountdownTimeline'
 import FeatureList from '@/components/FeatureList'
+import UseCasesList from '@/components/UseCasesList'
 
 export const metadata: Metadata = {
   title: 'ObstaX | Assistive Wearables for the Visually Impaired',
@@ -44,7 +45,7 @@ export default function Home() {
       <section className="flex min-h-[calc(100vh-64px-160px)] flex-col gap-2 sm:flex-row sm:gap-16">
         <div className="order-2 flex flex-1 flex-col justify-center text-balance sm:order-1">
 
-          <h1 className="scroll-m-20 text-xl font-medium lg:text-2xl mt-12">ObstaX Mini: AI Pendant</h1>
+          <h1 className="scroll-m-20 text-xl font-medium lg:text-2xl lg:mt-12">ObstaX Mini: AI Pendant</h1>
           <h1 className="scroll-m-20 text-4xl font-bold mt-2 lg:mt-4 lg:text-6xl">Confidence,</h1>
           <h1 className="scroll-m-20 text-4xl font-bold mt-1 lg:mt-2 lg:text-6xl">Independence,</h1>
           <h2 className="scroll-m-20 text-4xl font-normal italic mt-2 lg:mt-4 lg:text-6xl">Made for You.</h2>
@@ -72,7 +73,7 @@ export default function Home() {
             src="/images/obstax-main-pic-graybg.png"
             // src="/images/obstax-main-pic.png"
             width={600}
-            height={600}
+            height={400}
             min-width={400}
             min-height={400}
             alt="ObstaX SmartGlasses"
@@ -82,15 +83,17 @@ export default function Home() {
 
       {/* Cards */}
       <section>
-        <h2 className="section-header" id="timeline">Our timeline</h2>
+        <h2 className="section-header !mt-0" id="timeline">Our timeline</h2>
         <CountdownTimeline />
 
         {/* <h2 className="section-header" id="testimonial">Testimonials</h2>
         <TestimonialCard /> */}
 
         <h2 className="section-header" id="features">Product key features</h2>
-        {/* <FeatureCard /> */}
         <FeatureList />
+
+        <h2 className="section-header" id="use-cases">Real Use Cases</h2>
+        <UseCasesList />
       </section>
 
     </main>

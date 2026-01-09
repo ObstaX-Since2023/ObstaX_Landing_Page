@@ -30,27 +30,7 @@ const features: Feature[] = [
         imageSrc: '/images/featurelist/scene-recog.png',
         alt: 'Scene recognition visual',
     },
-    {
-        title: 'Internet Q&A',
-        description:
-            'Ask everyday questions, such as the time, nearby places, or general information—and receive real-time spoken answers.',
-        imageSrc: '/images/featurelist/internet-qna.png',
-        alt: 'Voice Q&A visual',
-    },
-    {
-        title: 'One-Button Capture',
-        description:
-            'A single button captures an image and instantly explains what is in front of you. No menus, No complexity.',
-        imageSrc: '/images/featurelist/one-button.png',
-        alt: 'Single button capture visual',
-    },
-    // {
-    //     title: 'Bluetooth Phone App (Coming Soon)',
-    //     description:
-    //         'Optionally connect to your phone for quicker processing, while keeping ObstaX Mini compact, lightweight, and comfortable to wear all day.',
-    //     imageSrc: '/images/featurelist/bluetooth-app.png',
-    //     alt: 'Bluetooth bridge visual',
-    // },
+
 ]
 
 export default function FeatureList() {
