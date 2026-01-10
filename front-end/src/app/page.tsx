@@ -92,8 +92,8 @@ export default function Home() {
         <h2 className="section-header" id="features">Product key features</h2>
         <FeatureList />
 
-        <h2 className="section-header" id="use-cases">Real Use Cases</h2>
-        <UseCasesList />
+        {/* <h2 className="section-header" id="use-cases">Real Use Cases</h2>
+        <UseCasesList /> */}
       </section>
 
     </main>
