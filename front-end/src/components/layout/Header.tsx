@@ -8,6 +8,7 @@ import {
     DropdownMenuItem,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import Image from "next/image";
 
 export default function Header() {
     const Headeritems = [
@@ -17,11 +18,22 @@ export default function Header() {
     ]
 
     return (
-        <header className="sticky top-0 z-50 bg-slate-300 w-full px-8 sm:px-16 py-4">
+        <header className="sticky top-0 z-50 bg-slate-300 w-full px-8 sm:px-16 py-3">
             <div className="flex justify-between items-center max-w-7xl sm:px-16 mx-auto w-full">
 
-                <Link href="/" className="text-2xl font-bold">
+                {/* <Link href="/" className="text-2xl font-bold">
                     ObstaX
+                </Link> */}
+
+                <Link href="/" aria-label="ObstaX Home">
+                    <Image
+                        src="/images/obstax-logo.png"
+                        alt="ObstaX Logo"
+                        width={64}
+                        height={64}
+                        priority
+                        className="h-10 w-auto sm:h-12"
+                    />
                 </Link>
 
                 <div className="flex flex-row gap-x-6">

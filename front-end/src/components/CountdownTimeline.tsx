@@ -52,7 +52,7 @@ const getTimeLeft = (targetMs: number, nowMs: number) => {
 }
 
 const CountdownSegment = ({ value, label }: { value: number; label: string }) => (
-  <div className="flex flex-col items-center rounded-2xl border border-border/60 bg-card/70 px-4 py-3 text-center">
+  <div className="flex flex-col items-center rounded-2xl border border-border/60 bg-card/70 px-4 py-3 text-center" aria-hidden="true">
     <span className="text-2xl font-semibold tabular-nums sm:text-3xl">{String(value).padStart(2, '0')}</span>
     <span className="text-[0.65rem] font-semibold uppercase tracking-[0.35em] text-muted-foreground">{label}</span>
   </div>
@@ -91,14 +91,21 @@ export default function CountdownTimeline() {
             className="rounded-3xl border border-border/60 bg-card/40 p-6 shadow-sm"
           >
             <div className="grid gap-6 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)_minmax(0,0.8fr)] md:items-center">
-              <div className="space-y-3" aria-live="polite">
+              <div className="space-y-3">
                 <div className="grid grid-cols-4 gap-2">
                   <CountdownSegment value={timeLeft.days} label="Days" />
                   <CountdownSegment value={timeLeft.hours} label="Hrs" />
                   <CountdownSegment value={timeLeft.minutes} label="Min" />
                   <CountdownSegment value={timeLeft.seconds} label="Sec" />
                 </div>
-
+                <p className="text-xs font-semibold uppercase tracking-[0.35em] text-muted-foreground">
+                  {timeLeft.isLive ? 'Live now' : 'Time until start'}
+                </p>
+                <p className="sr-only" aria-live="polite">
+                  {timeLeft.isLive
+                    ? `${event.title} is live now.`
+                    : `${event.title} starts in ${timeLeft.days} days, ${timeLeft.hours} hours, and ${timeLeft.minutes} minutes.`}
+                </p>
               </div>
 
               <div className="space-y-2">

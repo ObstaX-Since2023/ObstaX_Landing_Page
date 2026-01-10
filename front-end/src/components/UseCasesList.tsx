@@ -33,7 +33,7 @@ const features: Feature[] = [
 
 ]
 
-export default function FeatureList() {
+export default function UseCasesList() {
     return (
         <div className="mt-8 space-y-6">
             {features.map((feature, index) => (
